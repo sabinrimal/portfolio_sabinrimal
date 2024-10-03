@@ -34,7 +34,8 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+h6 {
   color: var(--text-color);
   margin: 0;
   padding: 0;
@@ -42,7 +43,8 @@ p {
 
 h2,
 h3,
-p {
+p,
+h6 {
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -62,6 +64,11 @@ h1 {
 }
 
 p {
+  font-size: 16px;
+  font-weight: 300;
+}
+h6 {
+  margin-top: 5px;
   font-size: 16px;
   font-weight: 300;
 }
@@ -88,6 +95,9 @@ p {
   p {
     font-size: 20px;
   }
+  h6 {
+    font-size: 20px;
+  }
 
   .sectionTitle {
     margin-bottom: 40px;
@@ -98,7 +108,7 @@ p {
       gap: 200px;
     }
     h1 {
-      font-size: 48px;
+      font-size: 42px;
     }
 
     .sectionTitle {

@@ -37,7 +37,7 @@ function Hero() {
         </div>
         <div className={styles.info}>
             <h1>
-                Sabin <br/> Rimal
+                Sabin&nbsp;Rimal
             </h1>
             <h2>
                 Graphics Designer | Web developer
