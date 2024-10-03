@@ -10,6 +10,12 @@ function Project() {
             <div className={styles.projectsContainer}>
                 <ProjectCard
                     src={viberr}
+                    link='https://github.com/sabinrimal/portfolio_sabinrimal'
+                    h3='My Portfolio'
+                    p='Static portfolio page designed using REACT'
+                />  
+                <ProjectCard
+                    src={viberr}
                     link='https://github.com/sabinrimal/T20_Score_Prediction'
                     h3='T20 Score Prediction'
                     p='Web app for predicting T20 scores'

@@ -1,13 +1,15 @@
 import styles from './ContactStyles.module.css';
 import Swal from 'sweetalert2'
 
+require("dotenv").config();
+
 function Contact() {
   // For form submission and sending email using https://web3forms.com/
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "6b57c2e0-4ca6-478d-98e2-d4bb3c0498ec");
+    formData.append("access_key", process.env.REACT_APP_WEB3FORMS_ACCESS_KEY);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -27,6 +29,7 @@ function Contact() {
         text: "Your enquiry request has been sent succesfully!",
         icon: "success"
       });
+      
       // Reset the form after submission
       event.target.reset();
     }
