@@ -1,8 +1,6 @@
 import styles from './ContactStyles.module.css';
 import Swal from 'sweetalert2'
 
-require("dotenv").config();
-
 function Contact() {
   // For form submission and sending email using https://web3forms.com/
   const onSubmit = async (event) => {
