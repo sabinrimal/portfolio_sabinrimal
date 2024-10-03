@@ -1,10 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding-top: 20px;
 
   img {
-    max-width: 150px;
+    max-width: 150px; /* Ensure the image size is consistent */
     align-self: center;
     background-color: var(--project-card-bg);
     border-radius: 20px;
@@ -25,16 +27,54 @@
 
 .projectsContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
+  flex-direction: column; /* Default to column for small screens */
+  align-items: center; /* Center cards on small screens */
+  gap: 40px; /* Space between cards */
 }
 
-@media (width >= 800px) {
+.projectCard {
+  position: relative;
+  padding-bottom: 20px; /* Ensure some spacing at the bottom */
+}
+
+/* Horizontal dividers for small screens */
+.projectCard:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px; /* Divider height */
+  background-color: #ccc; /* Divider color */
+}
+
+/* Styles for larger screens */
+@media (min-width: 800px) {
   .projectsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0 30px;
+    flex-direction: row; /* Change to row for larger screens */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center the cards */
+    align-items: flex-start; /* Align items to the start */
+    gap: 30px; /* Space between cards */
+    padding: 0 30px; /* Add padding to the container */
+  }
+
+  .projectsContainer > * {
+    flex-basis: calc(50% - 30px); /* Fit 2 cards in a row with gap */
+    max-width: calc(50% - 30px); /* Limit width to 50% of the container */
+    align-self: flex-start;
+    position: relative;
+  }
+
+  /* Vertical divider between cards */
+  .projectsContainer > *:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -15px; /* Positioning the divider on the right of the card */
+    top: 0; /* Align to the top of the card */
+    bottom: 0; /* Extend to the bottom of the card */
+    width: 1px; /* Width of the divider */
+    background-color: #ccc; /* Divider color */
   }
 }
