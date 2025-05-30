@@ -10,23 +10,15 @@ function Skills() {
         <div className={styles.skillList}>
             <SkillList
                 src={checkMarkIcon}
-                skill="HTML"
+                skill="Adobe Illustrator"
             />
             <SkillList
                 src={checkMarkIcon}
-                skill="CSS"
+                skill="Adobe Photoshop"
             />
             <SkillList
                 src={checkMarkIcon}
-                skill="Graphics"
-            />
-            <SkillList
-                src={checkMarkIcon}
-                skill="JavaScript"
-            />
-            <SkillList
-                src={checkMarkIcon}
-                skill="TypeScript"
+                skill="SQL & DBMS"
             />
         </div>
             <hr/>
@@ -37,15 +29,57 @@ function Skills() {
             />
             <SkillList
                 src={checkMarkIcon}
-                skill="NodeJS"
+                skill="HTML"
             />
             <SkillList
                 src={checkMarkIcon}
-                skill="ReactJS"
+                skill="CSS"
             />
             <SkillList
                 src={checkMarkIcon}
-                skill="MySQL"
+                skill="JavaScript"
+            />
+            <SkillList
+                src={checkMarkIcon}
+                skill="React JS"
+            />
+        </div>
+        <hr/>
+        <div className={styles.skillList}>
+            <SkillList
+                src={checkMarkIcon}
+                skill="Technical Support"
+            />
+            <SkillList
+                src={checkMarkIcon}
+                skill="Computer Hardware and Software"
+            />
+            <SkillList
+                src={checkMarkIcon}
+                skill="Windows Operating System"
+            />
+            <SkillList
+                src={checkMarkIcon}
+                skill="Microsoft Office Package"
+            />
+        </div>
+        <hr/>
+        <div className={styles.skillList}>
+            <SkillList
+                src={checkMarkIcon}
+                skill="Interpersonal Communication"
+            />
+            <SkillList
+                src={checkMarkIcon}
+                skill="Team Player"
+            />
+            <SkillList
+                src={checkMarkIcon}
+                skill="Technical Documentation"
+            />
+            <SkillList
+                src={checkMarkIcon}
+                skill="Creative Problem Solver"
             />
         </div>
     </section>
